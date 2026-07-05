@@ -7,74 +7,169 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        .hero { 
-            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
-                        url('images/vaibhavGrand.jpeg') center/cover no-repeat;
-        }
-        .card-img { height: 200px; object-fit: cover; }
+        .hero { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/vaibhavGrand.jpeg') center/cover no-repeat; }
+        .card-img { height: 220px; object-fit: cover; }
     </style>
 </head>
 <body class="bg-gray-50">
 
-    <!-- Hero -->
-    <header class="hero h-screen text-white flex items-center justify-center text-center">
-        <div class="max-w-4xl mx-auto px-6">
-            <h1 class="text-5xl md:text-6xl font-bold mb-4">Hotel Vaibhava Grand</h1>
-            <p class="text-2xl">Chitradurga, Karnataka</p>
+    <!-- Header -->
+    <header class="bg-blue-950 text-white sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div>
+                <h1 class="text-3xl font-bold">Hotel Vaibhava Grand</h1>
+                <p class="text-sm">Boarding, Lodging & Function Spaces</p>
+            </div>
+            <button onclick="showCart()" class="flex items-center gap-2 bg-white text-blue-950 px-6 py-3 rounded-2xl font-semibold">
+                <i class="fas fa-cart-shopping"></i> Cart (<span id="cart-count" class="font-bold">0</span>)
+            </button>
         </div>
     </header>
 
-    <!-- Welcome -->
-    <section class="py-12 md:py-20 bg-white text-center px-6">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Welcome to Vaibhava Grand</h2>
-            <p class="text-lg leading-relaxed">
-                Modern and welcoming hotel in Chitradurga offering clean comfortable AC & Non-AC rooms, 
-                multi-cuisine restaurant, and a spacious banquet hall for weddings and events up to 300 guests.
-            </p>
+    <!-- Hero -->
+    <section class="hero h-screen text-white flex items-center justify-center text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-5xl md:text-6xl font-bold mb-4">Vaibhav Grand</h2>
+            <p class="text-2xl mb-8">Classic function and dining spaces for up to 250 guests in Chitradurga</p>
+            <p class="text-xl">Function Hall: ₹20,000 | Dining Hall: ₹5,000 | Kitchen: ₹5,000</p>
         </div>
     </section>
 
-    <!-- Rooms -->
-    <section class="py-12 bg-gray-100 px-6">
-        <h2 class="text-3xl font-bold text-center mb-10">Lodging Suites</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <!-- Add more room cards as needed -->
-            <div class="bg-white rounded-2xl overflow-hidden shadow">
-                <img src="images/vaibhavGrand2.jpeg" class="card-img w-full" alt="Double Bed Room">
-                <div class="p-5">
-                    <h3 class="font-bold">Double Bed Room (Non-AC)</h3>
-                    <p class="text-green-600 font-semibold">₹1,312 / day</p>
-                </div>
-            </div>
-            <!-- Repeat similar cards for other rooms -->
+    <!-- Amenities -->
+    <div class="bg-white py-6 border-b">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-3 gap-4 text-center text-sm">
+            <div><i class="fas fa-car text-green-600"></i> Free Parking</div>
+            <div><i class="fas fa-shower text-green-600"></i> 24-Hour Hot Water</div>
+            <div><i class="fas fa-bolt text-green-600"></i> Generator Backup</div>
         </div>
+    </div>
+
+    <!-- Rooms -->
+    <section class="py-12 px-6 bg-gray-100">
+        <h2 class="text-3xl font-bold text-center mb-4">LODGING SUITES</h2>
+        <p class="text-center text-gray-600 mb-10">Booking sends query directly to Manager Deekshith on WhatsApp</p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto" id="rooms"></div>
     </section>
 
     <!-- Venues -->
     <section class="py-12 px-6">
-        <h2 class="text-3xl font-bold text-center mb-10">Event Venues</h2>
-        <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <div class="bg-white rounded-2xl overflow-hidden shadow text-center">
-                <img src="images/vaibhavGrand3.PNG" class="card-img w-full" alt="Function Hall">
-                <div class="p-5">
-                    <h3 class="font-bold">Function Hall</h3>
-                    <p class="text-green-600 font-semibold">₹20,000 / day</p>
-                </div>
-            </div>
+        <h2 class="text-3xl font-bold text-center mb-10">EVENT VENUES</h2>
+        <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto" id="venues"></div>
+    </section>
+
+    <!-- Services -->
+    <section class="py-12 px-6 bg-gray-100">
+        <h2 class="text-3xl font-bold text-center mb-10">EVENT SERVICES</h2>
+        <div class="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto" id="services"></div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="py-12 px-6">
+        <h2 class="text-3xl font-bold text-center mb-10">PHOTO GALLERY</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+            <img src="images/vaibhavGrand.jpeg" class="rounded-xl shadow" alt="Facade">
+            <img src="images/vaibhavGrand2.jpeg" class="rounded-xl shadow" alt="Room">
+            <img src="images/vaibhavGrand3.PNG" class="rounded-xl shadow" alt="Hall">
+            <!-- Add more images as needed -->
         </div>
     </section>
 
     <!-- Contact -->
-    <section class="py-16 bg-blue-950 text-white text-center px-6">
-        <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
-        <p class="text-2xl font-semibold">Manager Deekshith</p>
-        <p class="text-3xl mt-2">+91 87921 25788</p>
-        <p class="mt-8 text-lg">Near Railway Bridge, Turuvanuru Road, Chitradurga</p>
+    <section class="bg-blue-950 text-white py-16 text-center px-6">
+        <h2 class="text-3xl font-bold mb-8">Direct Contact Directory</h2>
+        <div class="max-w-md mx-auto space-y-4">
+            <p><strong>Manager: Deekshith</strong><br>+91 87921 25788</p>
+            <p><strong>Owner: G.K. Manjunatha</strong><br>+91 87225 59402</p>
+            <p><strong>Office</strong><br>+91 80888 97235</p>
+        </div>
+        <button onclick="sendToWhatsApp()" class="mt-10 bg-green-500 hover:bg-green-600 px-10 py-5 rounded-2xl text-xl font-bold">
+            Send Booking on WhatsApp
+        </button>
     </section>
 
     <footer class="bg-gray-900 text-white py-8 text-center">
-        <p>© 2026 Hotel Vaibhava Grand • All Rights Reserved</p>
+        <p>© 2026 Hotel Vaibhava Grand. All Rights Reserved.</p>
+        <p class="text-sm mt-2">Vaibhava Layout, Turuvanuru Road, Near Railway Bridge, Chitradurga - 577502</p>
     </footer>
+
+    <script>
+        let cart = [];
+
+        const rooms = [
+            {name:"Double Bed Room (Non-AC)", price:1312, desc:"2 Adults (2 Beds)"},
+            {name:"Double Bed Room (A/C)", price:1785, desc:"2 Adults (2 Beds)"},
+            {name:"Triple Bed Room (Non-AC)", price:1627, desc:"3 Adults (3 Beds)"},
+            {name:"Triple Bed Room (A/C)", price:2047, desc:"3 Adults (3 Beds)"},
+            {name:"Four Bed Room (Non-AC)", price:1890, desc:"4 Adults (2 Double Beds)"},
+            {name:"Six Bed Room (Non-AC)", price:2257, desc:"6 Adults (3 Double Beds)"}
+        ];
+
+        const venues = [
+            {name:"Vaibhava Grand Function Hall", price:20000, desc:"200-250 Guests"},
+            {name:"Spacious Dining Hall", price:5000, desc:"100+ Seating"},
+            {name:"Catering Kitchen Room", price:5000, desc:"Heavy Cooking Setup"}
+        ];
+
+        const services = [
+            {name:"Event Stage Design & Decoration", price:0, desc:"Custom décor charges on WhatsApp"},
+            {name:"Wedding Chair Covers", price:0, desc:"Rates calculated on WhatsApp"}
+        ];
+
+        // Render Rooms
+        rooms.forEach(r => {
+            const div = document.createElement('div');
+            div.className = "bg-white rounded-2xl shadow p-6";
+            div.innerHTML = `
+                <h3 class="font-bold">${r.name}</h3>
+                <p class="text-gray-600">${r.desc}</p>
+                <p class="text-2xl font-bold text-green-600 mt-4">₹${r.price}/day</p>
+                <button onclick="addToCart('${r.name}', ${r.price});" class="mt-6 w-full bg-blue-600 text-white py-3 rounded-xl">Add to Cart 🛒</button>
+            `;
+            document.getElementById('rooms').appendChild(div);
+        });
+
+        // Render Venues
+        venues.forEach(v => {
+            const div = document.createElement('div');
+            div.className = "bg-white rounded-2xl shadow p-6 text-center";
+            div.innerHTML = `
+                <h3 class="font-bold">${v.name}</h3>
+                <p class="text-gray-600">${v.desc}</p>
+                <p class="text-2xl font-bold text-green-600 mt-4">₹${v.price}</p>
+                <button onclick="addToCart('${v.name}', ${v.price});" class="mt-6 w-full bg-amber-600 text-white py-3 rounded-xl">Add to Cart 🛒</button>
+            `;
+            document.getElementById('venues').appendChild(div);
+        });
+
+        function addToCart(name, price) {
+            cart.push({name, price});
+            document.getElementById('cart-count').textContent = cart.length;
+            alert(`${name} added to cart!`);
+        }
+
+        function showCart() {
+            if(cart.length === 0) return alert("Cart is empty!");
+            let msg = "My Cart:\n\n";
+            let total = 0;
+            cart.forEach(item => {
+                msg += `• ${item.name} - ₹${item.price}\n`;
+                total += item.price;
+            });
+            msg += `\nTotal: ₹${total}`;
+            alert(msg);
+        }
+
+        function sendToWhatsApp() {
+            if(cart.length === 0) return alert("Add items first!");
+            let text = "Hello Hotel Vaibhava Grand!%0AI would like to book:%0A%0A";
+            let total = 0;
+            cart.forEach(item => {
+                text += `- ${item.name} : ₹${item.price}%0A`;
+                total += item.price;
+            });
+            text += `%0ATotal: ₹${total}%0A%0APlease confirm availability.`;
+            window.open(`https://wa.me/918792125788?text=${text}`, "_blank");
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,38 @@
+{
+  "name": "luxury-hotel-booking-app",
+  "version": "1.0.0",
+  "description": "A modern, elegant hotel booking mobile app UI with premium design, soft gradients, and smooth animations.",
+  "main": "HotelApp.tsx",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "preview": "next build && next start",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "next": "^14.0.0",
+    "framer-motion": "^11.0.0",
+    "lucide-react": "^0.376.0",
+    "clsx": "^2.1.0",
+    "tailwind-merge": "^2.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.4.0",
+    "tailwindcss": "^3.4.0",
+    "postcss": "^8.4.0",
+    "autoprefixer": "^10.4.0",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

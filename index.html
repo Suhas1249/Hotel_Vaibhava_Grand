@@ -5,24 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Vaibhava Grand | Chitradurga</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body class="bg-gray-50 font-sans">
+<body class="bg-gray-50">
 
-    <header class="bg-blue-900 text-white py-24 text-center">
-        <h1 class="text-6xl font-bold mb-4">Hotel Vaibhava Grand</h1>
-        <p class="text-2xl">Chitradurga, Karnataka</p>
+    <!-- Hero -->
+    <header class="bg-blue-950 text-white h-screen flex items-center justify-center text-center relative">
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="relative z-10 px-6 max-w-4xl">
+            <h1 class="text-6xl md:text-7xl font-bold mb-4">Hotel Vaibhava Grand</h1>
+            <p class="text-2xl mb-8">Chitradurga, Karnataka</p>
+            <a href="#contact" class="bg-amber-600 hover:bg-amber-700 px-10 py-4 rounded-xl text-xl font-semibold inline-block">
+                Book Your Stay
+            </a>
+        </div>
     </header>
 
-    <section class="py-16 text-center max-w-4xl mx-auto px-6">
-        <h2 class="text-4xl font-bold mb-6">Welcome to Vaibhava Grand</h2>
-        <p class="text-lg">
-            Modern hotel offering comfortable rooms, multi-cuisine restaurant, 
-            and a grand banquet hall near Chitradurga Fort & Railway Bridge.
-        </p>
+    <!-- About -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-6">Welcome to Vaibhava Grand</h2>
+            <p class="text-lg max-w-3xl mx-auto">
+                Modern and welcoming hotel in Chitradurga offering clean & comfortable AC & Non-AC rooms, 
+                delicious multi-cuisine dining, and a spacious banquet hall for weddings and events up to 300 guests.
+            </p>
+        </div>
+    </section>
+
+    <!-- Facilities -->
+    <section class="py-20 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Our Facilities</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+                    <i class="fas fa-bed text-4xl text-amber-600 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Comfortable Rooms</h3>
+                    <p>AC & Non-AC rooms with modern amenities</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+                    <i class="fas fa-utensils text-4xl text-amber-600 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Multi-Cuisine Restaurant</h3>
+                    <p>Delicious local and Indian dishes</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+                    <i class="fas fa-hotel text-4xl text-amber-600 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Grand Banquet Hall</h3>
+                    <p>Perfect for weddings & events (Up to 300 guests)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 bg-blue-950 text-white text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-8">Visit Us</h2>
+            <p class="text-xl mb-4">Near Railway Bridge, Turuvanuru Road</p>
+            <p class="text-xl mb-8">Chitradurga, Karnataka 577502</p>
+            <p class="text-2xl mb-2">📞 +91 XXXXXXXXXX</p>
+            <p class="text-lg">✉️ info@hotelvaibhavagrand.com</p>
+        </div>
     </section>
 
     <footer class="bg-gray-900 text-white py-8 text-center">
-        <p>© 2026 Hotel Vaibhava Grand • All Rights Reserved</p>
+        <p>&copy; 2026 Hotel Vaibhava Grand • All Rights Reserved</p>
     </footer>
 </body>
 </html>

@@ -6,63 +6,75 @@
     <title>Hotel Vaibhava Grand | Chitradurga</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
+                        url('images/vaibhavGrand.jpeg') center/cover no-repeat;
+        }
+        .card-img { height: 200px; object-fit: cover; }
+    </style>
 </head>
 <body class="bg-gray-50">
 
     <!-- Hero -->
-    <header class="bg-blue-950 text-white h-screen flex items-center justify-center text-center">
+    <header class="hero h-screen text-white flex items-center justify-center text-center">
         <div class="max-w-4xl mx-auto px-6">
-            <h1 class="text-6xl md:text-7xl font-bold mb-4">Hotel Vaibhava Grand</h1>
-            <p class="text-3xl mb-8">Chitradurga, Karnataka</p>
-            <a href="#contact" class="bg-amber-600 hover:bg-amber-700 px-10 py-4 rounded-2xl text-xl font-semibold inline-block">Book Your Stay</a>
+            <h1 class="text-5xl md:text-6xl font-bold mb-4">Hotel Vaibhava Grand</h1>
+            <p class="text-2xl">Chitradurga, Karnataka</p>
         </div>
     </header>
 
-    <!-- About -->
-    <section class="py-20 bg-white text-center">
-        <div class="max-w-5xl mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-6">Welcome to Vaibhava Grand</h2>
-            <p class="text-xl leading-relaxed">
+    <!-- Welcome -->
+    <section class="py-12 md:py-20 bg-white text-center px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Welcome to Vaibhava Grand</h2>
+            <p class="text-lg leading-relaxed">
                 Modern and welcoming hotel in Chitradurga offering clean comfortable AC & Non-AC rooms, 
                 multi-cuisine restaurant, and a spacious banquet hall for weddings and events up to 300 guests.
             </p>
         </div>
     </section>
 
-    <!-- Facilities -->
-    <section class="py-20 bg-gray-100">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12">Our Facilities</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow text-center">
-                    <i class="fas fa-bed text-5xl text-amber-600 mb-4"></i>
-                    <h3 class="text-2xl font-semibold">Comfortable Rooms</h3>
+    <!-- Rooms -->
+    <section class="py-12 bg-gray-100 px-6">
+        <h2 class="text-3xl font-bold text-center mb-10">Lodging Suites</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <!-- Add more room cards as needed -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow">
+                <img src="images/vaibhavGrand2.jpeg" class="card-img w-full" alt="Double Bed Room">
+                <div class="p-5">
+                    <h3 class="font-bold">Double Bed Room (Non-AC)</h3>
+                    <p class="text-green-600 font-semibold">₹1,312 / day</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow text-center">
-                    <i class="fas fa-utensils text-5xl text-amber-600 mb-4"></i>
-                    <h3 class="text-2xl font-semibold">Multi-Cuisine Restaurant</h3>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow text-center">
-                    <i class="fas fa-hotel text-5xl text-amber-600 mb-4"></i>
-                    <h3 class="text-2xl font-semibold">Banquet Hall</h3>
-                    <p class="text-sm mt-2">(Up to 300 guests)</p>
+            </div>
+            <!-- Repeat similar cards for other rooms -->
+        </div>
+    </section>
+
+    <!-- Venues -->
+    <section class="py-12 px-6">
+        <h2 class="text-3xl font-bold text-center mb-10">Event Venues</h2>
+        <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div class="bg-white rounded-2xl overflow-hidden shadow text-center">
+                <img src="images/vaibhavGrand3.PNG" class="card-img w-full" alt="Function Hall">
+                <div class="p-5">
+                    <h3 class="font-bold">Function Hall</h3>
+                    <p class="text-green-600 font-semibold">₹20,000 / day</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="py-20 bg-blue-950 text-white text-center">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-8">Get in Touch</h2>
-            <p class="text-xl">Near Railway Bridge, Turuvanuru Road</p>
-            <p class="text-xl mb-6">Chitradurga, Karnataka 577502</p>
-            <p class="text-2xl">📞 +91 XXXXXXXXXX</p>
-        </div>
+    <section class="py-16 bg-blue-950 text-white text-center px-6">
+        <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+        <p class="text-2xl font-semibold">Manager Deekshith</p>
+        <p class="text-3xl mt-2">+91 87921 25788</p>
+        <p class="mt-8 text-lg">Near Railway Bridge, Turuvanuru Road, Chitradurga</p>
     </section>
 
     <footer class="bg-gray-900 text-white py-8 text-center">
-        <p>&copy; 2026 Hotel Vaibhava Grand • All Rights Reserved</p>
+        <p>© 2026 Hotel Vaibhava Grand • All Rights Reserved</p>
     </footer>
 </body>
 </html>

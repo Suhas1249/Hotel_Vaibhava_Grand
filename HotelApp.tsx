@@ -179,7 +179,7 @@ const DECOR_DATA: DecorItem[] = [
     name: 'Event Stage Design & Decoration',
     description: 'Custom traditional naming ceremony cradle setups, wedding backdrops, flower arches, and draping (as shown in our real cradle stage photo).',
     details: 'Separate charges apply based on stage theme selection.',
-    image: '/decor1.png',
+    image: '/stage_decor.jpg',
   },
   {
     id: 'chair-covers',
@@ -193,7 +193,7 @@ const DECOR_DATA: DecorItem[] = [
 // Album contains ONLY real photos, no AI placeholders
 const ALBUM_IMAGES = [
   { src: '/exterior.jpg', title: 'Lodge & Convention Hall Facade' },
-  { src: '/decor1.png', title: 'Traditional Cradle Ceremony Decor' },
+  { src: '/stage_decor.jpg', title: 'Event Stage Design & Decoration' },
   { src: '/room1.png', title: 'Real Double Bed Room' },
   { src: '/room2.png', title: 'AC Double Bed Room' },
   { src: '/room3.jpg', title: 'Real Triple Bed Room' },
@@ -204,7 +204,6 @@ const ALBUM_IMAGES = [
   { src: '/tariff.png', title: 'Official Lodge Tariff Card' },
   { src: '/vaibhavGrand.jpeg', title: 'Hotel Reception Lounge' },
   { src: '/vaibhavGrand2.jpeg', title: 'Lodge Entrance and Lobby' },
-  { src: '/vaibhavGrand8.jpeg', title: 'Guest Room Corridor and Hallways' },
 ];
 
 const AGENTS = [

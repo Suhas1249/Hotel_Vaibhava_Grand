@@ -79,7 +79,7 @@ const ROOMS_DATA: RoomItem[] = [
     gst: 62,
     totalPrice: 1312,
     description: 'Comfortable lodge room containing exactly 2 beds, attached clean bathroom, LED TV, and wardrobe.',
-    image: '/room1.png',
+    image: 'room1.png',
   },
   {
     id: 'double-ac',
@@ -91,7 +91,7 @@ const ROOMS_DATA: RoomItem[] = [
     gst: 85,
     totalPrice: 1785,
     description: 'Air-conditioned double bedroom with exactly 2 beds, modern interiors, and clean tiles.',
-    image: '/room2.png',
+    image: 'room2.png',
   },
   {
     id: 'triple-non-ac',
@@ -103,7 +103,7 @@ const ROOMS_DATA: RoomItem[] = [
     gst: 77,
     totalPrice: 1627,
     description: 'Spacious guest room featuring exactly 3 beds, attached neat bathroom, and ventilation.',
-    image: '/room3.jpg',
+    image: 'room3.jpg',
   },
   {
     id: 'triple-ac',
@@ -115,7 +115,7 @@ const ROOMS_DATA: RoomItem[] = [
     gst: 97,
     totalPrice: 2047,
     description: 'Air-conditioned guest room featuring exactly 3 beds, ideal for families.',
-    image: '/room3.jpg',
+    image: 'room3.jpg',
   },
   {
     id: 'four-bed-non-ac',
@@ -127,7 +127,7 @@ const ROOMS_DATA: RoomItem[] = [
     gst: 90,
     totalPrice: 1890,
     description: 'Large family bedroom with 2 double beds (4 beds total), clean sheets, and ample space.',
-    image: '/room1.png',
+    image: 'room1.png',
   },
   {
     id: 'six-bed-non-ac',
@@ -139,7 +139,7 @@ const ROOMS_DATA: RoomItem[] = [
     gst: 107,
     totalPrice: 2257,
     description: 'Extra-large lodging room containing 3 double beds (6 beds total), perfect for wedding guests.',
-    image: '/room3.jpg',
+    image: 'room3.jpg',
   },
 ];
 
@@ -151,7 +151,7 @@ const VENUES_DATA: VenueItem[] = [
     description: 'Grand function space with wedding stage layout. Includes Fan Ventilation. Air Cooler available inside the hall (charges apply).',
     capacity: '200 to 250 Guests',
     details: 'Equipped with main stage lighting and large guest seating hall.',
-    image: '/exterior.jpg',
+    image: 'exterior.jpg',
   },
   {
     id: 'dining-hall',
@@ -160,7 +160,7 @@ const VENUES_DATA: VenueItem[] = [
     description: 'Large dining room adjacent to the function hall, structured for smooth guest catering services.',
     capacity: '100+ Seating Capacity',
     details: 'Includes clean serving counters, washbasins, and dining tables.',
-    image: '/dining_indoor.jpg',
+    image: 'dining_indoor.jpg',
   },
   {
     id: 'kitchen-hall',
@@ -169,7 +169,7 @@ const VENUES_DATA: VenueItem[] = [
     description: 'Commercial cooking area designed for large-scale wedding cooking and professional catering teams.',
     capacity: 'Heavy Cooking Setup',
     details: 'Equipped with gas pipeline layout, storage racks, and food prep areas.',
-    image: '/kitchen.jpg',
+    image: 'kitchen.jpg',
   },
 ];
 
@@ -179,31 +179,31 @@ const DECOR_DATA: DecorItem[] = [
     name: 'Event Stage Design & Decoration',
     description: 'Custom traditional naming ceremony cradle setups, wedding backdrops, flower arches, and draping (as shown in our real cradle stage photo).',
     details: 'Separate charges apply based on stage theme selection.',
-    image: '/stage_decor.jpg',
+    image: 'stage_decor.jpg',
   },
   {
     id: 'chair-covers',
     name: 'Wedding Chair Covers',
     description: 'Banquet chairs covered in neat stretch fabric covers with satin ribbons, marigolds, and traditional Indian wedding accents.',
     details: 'Separate charges apply per chair cover requested.',
-    image: '/chair_cover.jpg',
+    image: 'chair_cover.jpg',
   },
 ];
 
 // Album contains ONLY real photos, no AI placeholders
 const ALBUM_IMAGES = [
-  { src: '/exterior.jpg', title: 'Lodge & Convention Hall Facade' },
-  { src: '/stage_decor.jpg', title: 'Event Stage Design & Decoration' },
-  { src: '/room1.png', title: 'Real Double Bed Room' },
-  { src: '/room2.png', title: 'AC Double Bed Room' },
-  { src: '/room3.jpg', title: 'Real Triple Bed Room' },
-  { src: '/room6.jpg', title: 'Real Six Bed Room' },
-  { src: '/dining_indoor.jpg', title: 'Spacious Indoor Dining Hall' },
-  { src: '/dining_outdoor.jpg', title: 'Outdoor Dining Lawn Area' },
-  { src: '/kitchen.jpg', title: 'Commercial Catering Kitchen' },
-  { src: '/tariff.png', title: 'Official Lodge Tariff Card' },
-  { src: '/vaibhavGrand.jpeg', title: 'Hotel Reception Lounge' },
-  { src: '/vaibhavGrand2.jpeg', title: 'Lodge Entrance and Lobby' },
+  { src: 'exterior.jpg', title: 'Lodge & Convention Hall Facade' },
+  { src: 'stage_decor.jpg', title: 'Event Stage Design & Decoration' },
+  { src: 'room1.png', title: 'Real Double Bed Room' },
+  { src: 'room2.png', title: 'AC Double Bed Room' },
+  { src: 'room3.jpg', title: 'Real Triple Bed Room' },
+  { src: 'room6.jpg', title: 'Real Six Bed Room' },
+  { src: 'dining_indoor.jpg', title: 'Spacious Indoor Dining Hall' },
+  { src: 'dining_outdoor.jpg', title: 'Outdoor Dining Lawn Area' },
+  { src: 'kitchen.jpg', title: 'Commercial Catering Kitchen' },
+  { src: 'tariff.png', title: 'Official Lodge Tariff Card' },
+  { src: 'vaibhavGrand.jpeg', title: 'Hotel Reception Lounge' },
+  { src: 'vaibhavGrand2.jpeg', title: 'Lodge Entrance and Lobby' },
 ];
 
 const AGENTS = [
@@ -442,7 +442,7 @@ Please let me know room availability. Thank you!`;
 
       {/* HERO BANNER */}
       <div className="relative bg-slate-950 text-white py-16 px-6 border-b border-slate-900 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center opacity-35" style={{ backgroundImage: "url('/exterior.jpg')" }} />
+        <div className="absolute inset-0 bg-cover bg-center opacity-35" style={{ backgroundImage: "url('exterior.jpg')" }} />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent" />
         
         <div className="max-w-6xl mx-auto relative z-10 space-y-6">
